@@ -1,0 +1,8 @@
+.failed-container {
+  display: flex;
+  align-items: center;
+}
+
+.failed-container .ant-alert {
+  margin-right: 10px;
+}
