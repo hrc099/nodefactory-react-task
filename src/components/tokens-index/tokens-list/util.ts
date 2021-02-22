@@ -1,4 +1,4 @@
-import { IToken } from "../../store/types"
+import { IToken } from "../../../store/types"
 
 export type TokensListProps = {
   tokens: IToken[]

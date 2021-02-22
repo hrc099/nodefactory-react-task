@@ -2,8 +2,8 @@ import { Radio, RadioChangeEvent, Spin, Alert, Button } from 'antd'
 import { useSelector, useDispatch } from 'react-redux'
 
 import { RootState } from '../../store/types'
-import { EthereumTokensPercentage } from '../ethereum-tokens-percentage/EthereumTokensPercentage'
-import { TokensList } from '../tokens-list/TokensList'
+import { EthereumTokensPercentage } from './ethereum-tokens-percentage/EthereumTokensPercentage'
+import { TokensList } from './tokens-list/TokensList'
 import { findTokensThunk, toggleShowOnlyEthereumTokens } from './tokensSlice'
 import './TokensIndex.css'
 
