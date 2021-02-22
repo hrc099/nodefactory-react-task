@@ -13,6 +13,7 @@ export const TokensIndex: React.FunctionComponent = () => {
   const tokenStatus = useSelector((state: RootState) => state.token.status)
   const showOnlyEthereumTokens = useSelector((state: RootState) => state.token.showOnlyEthereumTokens)
   const ethereumTokens = useSelector((state: RootState) => state.token.tokens.filter((token) => token.isEthereumToken))
+  const ethereumPercentage = (ethereumTokens.length / tokens.length * 100).toFixed(2)
 
   const onToggleShowOnlyEthereumTokens = (event: RadioChangeEvent): void => {
     dispatch(toggleShowOnlyEthereumTokens(event.target.value))
@@ -56,7 +57,7 @@ export const TokensIndex: React.FunctionComponent = () => {
         </div>
         {!showOnlyEthereumTokens &&
           <div className="ethereum-percentage">
-            <EthereumTokensPercentage percentage={(ethereumTokens.length / tokens.length * 100).toFixed(2)}/>
+            <EthereumTokensPercentage percentage={ethereumPercentage}/>
           </div>
         }
         <div className="tokens-list">
